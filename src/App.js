@@ -26,21 +26,21 @@ class App extends React.Component {
             const CITY = event.target.elements.city.value;
 
             if (CITY) {
-            const api_url = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric`);
+            const apiUrl = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric`);
 
-            const data = await api_url.json();
+            const data = await apiUrl.json();
 
-            let dateRise = new Date(data.sys.sunrise*1000);
-            let hoursRise = dateRise.getHours();
-            let minutesRise = "0" + dateRise.getMinutes();
-            let secondsRise = "0" + dateRise.getSeconds();
-            let sunrise_date = hoursRise + ':' + minutesRise.substr(-2) + ':' + secondsRise.substr(-2);
+            const dateRise = new Date(data.sys.sunrise*1000);
+            const hoursRise = dateRise.getHours();
+            const minutesRise = "0" + dateRise.getMinutes();
+            const secondsRise = "0" + dateRise.getSeconds();
+            const sunrise_date = hoursRise + ':' + minutesRise.substr(-2) + ':' + secondsRise.substr(-2);
 
-            let dateSet = new Date(data.sys.sunset*1000);
-            let hoursSet = dateSet.getHours();
-            let minutesSet = "0" + dateSet.getMinutes();
-            let secondsSet = "0" + dateSet.getSeconds();
-            let sunset_date = hoursSet + ':' + minutesSet.substr(-2) + ':' + secondsSet.substr(-2);
+            const dateSet = new Date(data.sys.sunset*1000);
+            const hoursSet = dateSet.getHours();
+            const minutesSet = "0" + dateSet.getMinutes();
+            const secondsSet = "0" + dateSet.getSeconds();
+            const sunset_date = hoursSet + ':' + minutesSet.substr(-2) + ':' + secondsSet.substr(-2);
 
             this.setState({
                 temp: data.main.temp,
@@ -59,7 +59,7 @@ class App extends React.Component {
                     sunset: undefined,
                     error: "Enter a valid city name"
                 });
-         }
+            }
     };
 
     render() {

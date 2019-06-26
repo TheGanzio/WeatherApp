@@ -26,11 +26,15 @@ class App extends React.Component {
             const CITY = event.target.elements.city.value;
 
             if (CITY) {
-            const api_url = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric`);
+            const apiUrl = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric`);
 
-            const data = await api_url.json();
+            const data = await apiUrl.json();
 
+<<<<<<< HEAD
             const dateRise = new Date(data.sys.sunrise*1000);
+=======
+            let dateRise = new Date(data.sys.sunrise*1000);
+>>>>>>> 31c85f2f1be59cae40baa6aa00a46210a55f0b4f
             const hoursRise = dateRise.getHours();
             const minutesRise = "0" + dateRise.getMinutes();
             const secondsRise = "0" + dateRise.getSeconds();
@@ -59,7 +63,7 @@ class App extends React.Component {
                     sunset: undefined,
                     error: "Enter a valid city name"
                 });
-         }
+            }
     };
 
     render() {

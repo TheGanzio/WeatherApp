@@ -18,7 +18,7 @@ class App extends React.Component {
             sunset: undefined,
             error: undefined
         };
-    }
+    };
 
     gettingWeather = async (event) => {
 
@@ -26,8 +26,8 @@ class App extends React.Component {
         const CITY = event.target.elements.city.value;
 
         if (CITY) {
-            const apiUrl = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric`);
 
+            const apiUrl = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric`);
             const data = await apiUrl.json();
 
             if (data.sys === undefined) {
@@ -37,10 +37,9 @@ class App extends React.Component {
                     country: undefined,
                     sunrise: undefined,
                     sunset: undefined,
-                    error: 'Enter a valid city'
+                    error: 'Enter a original city name'
                 });
             } else if (data.sys !== undefined) {
-
 
                 const dateRise = new Date(data.sys.sunrise * 1000);
                 const hoursRise = dateRise.getHours();
@@ -61,15 +60,6 @@ class App extends React.Component {
                     sunrise: sunrise_date,
                     sunset: sunset_date,
                     error: undefined
-                });
-            } else {
-                this.setState({
-                    temp: undefined,
-                    city: undefined,
-                    country: undefined,
-                    sunrise: undefined,
-                    sunset: undefined,
-                    error: "Enter a valid city name"
                 });
             }
         }

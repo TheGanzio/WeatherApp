@@ -1,8 +1,9 @@
 .info {
+    top: 21px;
+    position: relative;
     height: 85px;
     background: rgba(204, 204, 204, .3);
     margin: -20px;
-
 }
 
 .content {
@@ -36,7 +37,7 @@
 
 .Cities {
     left: 425px;
-    top: 105px;
+    top: 125px;
     position: relative;
     height: 50px;
     width: 150px;
@@ -52,7 +53,7 @@
     vertical-align:middle;
 }
 
-.btn {
+.btn1 {
     text-decoration:none;
     text-align:center;
     padding:14px 28px;
@@ -100,12 +101,13 @@
     background-color: rgba(204, 204, 204, .3);
     margin: 0;
     position: absolute;
+    border: 2px #004F72;
     top: 42%;
     left: 50%;
     height: 200px;
     width: 250px;
     transform: translate(-50%, -50%);
- vertical-align:middle;
+    vertical-align:middle;
 }
 
 #informationWeather {

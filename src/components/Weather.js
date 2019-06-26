@@ -2,7 +2,7 @@ import React from "react";
 
 const Weather = (props) =>
     (
-        <div className="weather" className="weather">
+        <div className="weather">
             { props.city &&
             <div >
                 <p className="textSite" id="informationWeather">Location: {props.city}, {props.country} </p>

@@ -30,7 +30,7 @@ class App extends React.Component {
 
             const data = await apiUrl.json();
 
-            const dateRise = new Date(data.sys.sunrise*1000);
+            let dateRise = new Date(data.sys.sunrise*1000);
             const hoursRise = dateRise.getHours();
             const minutesRise = "0" + dateRise.getMinutes();
             const secondsRise = "0" + dateRise.getSeconds();

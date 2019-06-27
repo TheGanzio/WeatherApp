@@ -1,108 +1,141 @@
-.info {
-    top: 21px;
-    position: relative;
-    height: 85px;
-    background: rgba(204, 204, 204, .3);
-    margin: -20px;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+#root {
+    background-color: #644D9D;
+    font-family: "Open Sans", serif;
 }
 
-.content {
+.wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(178,66,224,1);
+    background: -moz-linear-gradient(45deg, rgba(45,176,224,1) 0%, rgba(96,40,168,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(45,176,224,1)), color-stop(100%, rgba(96,40,168,1)));
+    background: -webkit-linear-gradient(45deg, rgba(45,176,224,1) 0%, rgba(96,40,168,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(45,176,224,1) 0%, rgba(96,40,168,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(45,176,224,1) 0%, rgba(96,40,168,1) 100%);
+    background: linear-gradient(45deg, rgba(45,176,224,1) 0%, rgba(96,40,168,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2db0e0', endColorstr='#6028a8', GradientType=1 );
+}
+
+.main {
+    height: 55vh;
+    background-color: #2a6bb1;
+    box-shadow: 0px 2px 80px -20px rgba(0,0,0,0.5);
+    width: 60%;
+    margin: 0 auto;
+}
+
+.info {
+    height: 55vh;
+    background: url("img/polygon.jpg") center center no-repeat;
+    background-blend-mode: multiply;
+    background-color: #484747;
+    border: 2px solid #1f1f1f;
+    border-right: 2px solid #131e29;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    color: #000;
+}
+
+.form {
+    height: 55vh;
+    padding-top: 100px;
+    padding-left: 50px;
+    border-top: 2px solid #113a65;
+    border-bottom: 2px solid #113a65;
+    border-right: 2px solid #113a65;
+}
+
+input[type="text"] {
+    background-color: transparent;
+    border: 0;
+    border-bottom: solid 2px #113a65;
+    width: 50%;
+    padding-bottom: 4px;
+    color: #fff;
+    font-weight: lighter;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    font-size: 20px;
+    outline: none;
+}
+
+input::-webkit-input-placeholder {
+    color: #103a65;
+}
+
+input::-moz-placeholder {
+    color: #103a65;
+}
+
+button {
+    border: 2px solid #103a65;
+    border-bottom: 4px solid #103a65;
+    padding: 8px 20px;
+    margin: 0 2px;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: #235d9c;
+    color: #fff;
+    outline: none!important;
+}
+
+button:hover {
+    border-bottom: 2px solid #103a65;
+    position: relative;
+    top: 2px;
 }
 
 .cityBtn {
-    text-decoration:none;
-    text-align:center;
-    padding:11px 32px;
-    border:solid 1px #004F72;
-    -webkit-border-radius:50px;
-    -moz-border-radius:50px;
-    border-radius: 50px;
-    font:13px "Lucida Console", Monaco, monospace;
-    font-weight:bold;
-    color:#050505;
-    background:#ffffff;
-    -webkit-box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
-    -moz-box-shadow: 0px 0px 2px #bababa,  inset 0px 0px 1px #ffffff;
-    box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
-}
-
-.form1 {
-    display: none;
-}
-
-.form2 {
+    border: 2px solid #103a65;
+    border-bottom: 4px solid #103a65;
+    padding: 8px 20px;
+    margin: 0 2px;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: #235d9c;
+    color: #fff;
+    outline: none!important;
     position: relative;
 }
 
 .Cities {
-    left: 425px;
-    top: 125px;
-    position: relative;
+    left: 80%;
+    top: 36%;
     height: 50px;
     width: 150px;
-}
-
-.form {
-    margin: 0;
     position: absolute;
-    top: 25%;
-    left: 50%;
-    height: 25px;
-    transform: translate(-50%, -50%);
-    vertical-align:middle;
 }
 
-.btn1 {
-    text-decoration:none;
-    text-align:center;
-    padding:14px 28px;
-    border:none;
-    -webkit-border-radius:50px;
-    -moz-border-radius:50px;
-    border-radius: 50px;
-    font:15px Arial, Helvetica, sans-serif;
-    font-weight:bold;
-    color:#000000;
-    background:#ffffff;
-    -webkit-box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
-    -moz-box-shadow: 0px 0px 2px #bababa,  inset 0px 0px 1px #ffffff;
-    box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
-    height: 25px;
-    position: relative;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-family: Arial, sans-serif;
-    margin:0;
-    padding:0;
-    display:inline-block;
+.form1 {
+    display: none;
 
-
-    text-shadow: 0px 0px 9px #ffffff;
-    filter: dropshadow(color=#ffffff, offx=0, offy=0); }
-
-.text {
-    border-radius: 10px 10px 10px 10px;
-    position: relative;
-    border: #dfdfdf 1px solid;
-    margin:0;
-    padding:0;
-    display:inline-block;
-    height: 25px;
-    width: 200px;
 }
 
-.textSite{
-    color: black;
-    text-align: center;
+.info h2 {
+    font-size: 3em;
+    color: #fff;
+}
+
+.info p {
+    color: #e4e4e4;
+    font-weight: bold;
 }
 
 .weather {
-    background-color: rgba(204, 204, 204, .3);
+    font-size: 20px;
+    color: #fff;
     margin: 0;
     position: absolute;
     border: 2px #004F72;
-    top: 42%;
+    top: 60%;
     left: 50%;
     height: 200px;
     width: 250px;
@@ -110,46 +143,7 @@
     vertical-align:middle;
 }
 
-#informationWeather {
-    text-align: center;
-}
-
-@font-face {
-    font-family: "CaviarDreamsRegular";
-    src: url("/fonts/CaviarDreamsRegular/CaviarDreamsRegular.eot");
-    src: url("/fonts/CaviarDreamsRegular/CaviarDreamsRegular.eot?#iefix")format("embedded-opentype"),
-    url("/fonts/CaviarDreamsRegular/CaviarDreamsRegular.woff") format("woff"),
-    url("/fonts/CaviarDreamsRegular/CaviarDreamsRegular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: "CaviarDreamsBold";
-    src: url("/fonts/CaviarDreamsBold/CaviarDreamsBold.eot");
-    src: url("/fonts/CaviarDreamsBold/CaviarDreamsBold.eot?#iefix")format("embedded-opentype"),
-    url("/fonts/CaviarDreamsBold/CaviarDreamsBold.woff") format("woff"),
-    url("/fonts/CaviarDreamsBold/CaviarDreamsBold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: "CaviarDreamsItalic";
-    src: url("/fonts/CaviarDreamsItalic/CaviarDreamsItalic.eot");
-    src: url("/fonts/CaviarDreamsItalic/CaviarDreamsItalic.eot?#iefix")format("embedded-opentype"),
-    url("/fonts/CaviarDreamsItalic/CaviarDreamsItalic.woff") format("woff"),
-    url("/fonts/CaviarDreamsItalic/CaviarDreamsItalic.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: "CaviarDreamsBoldItalic";
-    src: url("/fonts/CaviarDreamsBoldItalic/CaviarDreamsBoldItalic.eot");
-    src: url("/fonts/CaviarDreamsBoldItalic/CaviarDreamsBoldItalic.eot?#iefix")format("embedded-opentype"),
-    url("/fonts/CaviarDreamsBoldItalic/CaviarDreamsBoldItalic.woff") format("woff"),
-    url("/fonts/CaviarDreamsBoldItalic/CaviarDreamsBoldItalic.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
+.error {
+    color: #041f3c;
+    font-weight: bold;
 }

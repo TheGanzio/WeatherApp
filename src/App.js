@@ -67,18 +67,20 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className="app">
+            <div className="wrapper">
                 <Info />
-                <Form weatherMethod={this.gettingWeather} />
-                <Cities weatherMethod={this.gettingWeather} />
-                <Weather
-                temp={this.state.temp}
-                city={this.state.city}
-                country={this.state.country}
-                sunrise={this.state.sunrise}
-                sunset={this.state.sunset}
-                error={this.state.error}
-                />
+                <div className="main">
+                  <Form weatherMethod={this.gettingWeather} />
+                  <Cities weatherMethod={this.gettingWeather} />
+                  <Weather
+                  temp={this.state.temp}
+                  city={this.state.city}
+                  country={this.state.country}
+                  sunrise={this.state.sunrise}
+                  sunset={this.state.sunset}
+                  error={this.state.error}
+                  />
+                </div>
             </div>
         );
     }

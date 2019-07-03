@@ -39,7 +39,7 @@ class App extends React.Component {
                     sunset: undefined,
                     error: 'Enter a original city name'
                 });
-            } else if (data.sys !== undefined) {
+            } else if (data.sys) {
 
                 const dateRise = new Date(data.sys.sunrise * 1000);
                 const hoursRise = dateRise.getHours();
